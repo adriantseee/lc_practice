@@ -1,0 +1,19 @@
+id,name,primitive_id,invariant,template_code,complexity_signature,difficulty_tier
+1,Arrays_Strings,1,Iterate with indices; array gives random-access O(1),for i in range(len(arr)): process(arr[i]),O(n) baseline scan,1
+2,Two_Pointers,1,Two indices converge; invariant maintained between them,l=0|r=len(arr)-1|while l<r: adjust l or r,O(n^2) -> O(n),1
+3,Sliding_Window,1,Window [l r] always satisfies condition; shrink when violated,l=0|for r in range(n): expand|while invalid: shrink l,O(n^2) -> O(n),2
+4,Prefix_Sum,1,prefix[i]=sum(arr[0..i-1]); range sum = prefix[r+1]-prefix[l],prefix=[0]*(n+1)|for i x in enumerate(arr): prefix[i+1]=prefix[i]+x,O(n) build O(1) query,1
+5,Binary_Search,1,Search space halves; lo/hi bracket the answer,lo=0|hi=n-1|while lo<=hi: mid=(lo+hi)//2; branch on condition,O(n) -> O(log n),2
+6,Hashing,1,Trade space for O(1) lookup; complement or count stored in map,seen={}|for x in arr: if complement in seen: found; else seen[x]=val,O(n^2) -> O(n) with O(n) space,1
+7,Stacks_Queues,1,LIFO/FIFO discipline; element retained only until needed,stack=[]|for x in arr: while stack and condition: stack.pop()|stack.append(x),O(n) amortized,2
+8,Monotonic_Stack,1,Stack stays monotone; elements pop when a larger/smaller arrives,stack=[]|for i x in enumerate(arr): while stack and arr[stack[-1]]<x: pop and compute|stack.append(i),O(n^2) -> O(n),2
+9,Linked_Lists,2,Traverse by following .next; dummy head simplifies edge cases,dummy=ListNode(0)|dummy.next=head|cur=dummy|while cur.next: process; cur=cur.next,O(n) traversal O(1) insert/delete,1
+10,Fast_Slow_Pointers,2,Fast moves 2x; they meet iff a cycle exists,slow=fast=head|while fast and fast.next: slow=slow.next; fast=fast.next.next,O(n) time O(1) space vs O(n) visited set,2
+11,Trees_DFS,2,Recurse: solve(left)+solve(right)+combine at root,def dfs(node):|  if not node: return base|  l=dfs(node.left); r=dfs(node.right)|  return combine(l r node.val),O(n) visit each node once,2
+12,Trees_BFS,2,Process level-by-level; queue holds current frontier,from collections import deque|q=deque([root])|while q: for _ in range(len(q)): node=q.popleft(); expand,O(n) time O(w) space w=max width,2
+13,Heaps,1,Heap invariant: parent<=children (min-heap); O(log n) push/pop,import heapq|heap=[]|heapq.heappush(heap x)|heapq.heappop(heap),O(n log k) for top-k vs O(n log n) sort,2
+14,Backtracking,2,Build candidate incrementally; prune when constraint violated,def bt(start path):|  if done: results.append(path[:]); return|  for i in range(start n): path.append(i); bt(i+1 path); path.pop(),O(2^n) worst; pruning reduces constant,3
+15,Graphs,2,BFS/DFS from source; visited set prevents reprocessing,graph=defaultdict(list)|visited=set()|def dfs(u): visited.add(u)|  for v in graph[u]: if v not in visited: dfs(v),O(V+E),3
+16,Union_Find,1,parent[x]=representative; union by rank + path compression,parent=list(range(n))|def find(x): if parent[x]!=x: parent[x]=find(parent[x]); return parent[x]|def union(x y): parent[find(x)]=find(y),O(alpha(n)) per operation,3
+17,Dynamic_Programming,1,dp[i]=optimal for subproblem i; built bottom-up from smaller subproblems,dp=[base]*(n+1)|for i in range(1 n+1): dp[i]=min/max over transitions from dp[j<i],O(2^n) -> O(n^2) or O(n) by state,3
+18,Greedy,1,Locally optimal choice is globally optimal; proved by exchange argument,arr.sort(key=lambda x: criterion(x))|for x in arr: if feasible(x): take(x),O(n log n) sort + O(n) scan,2

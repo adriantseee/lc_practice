@@ -1,0 +1,21 @@
+id,text,signal_type
+1,contiguous subarray or substring,linguistic
+2,sorted array with pair or triplet sum,linguistic
+3,kth largest or top k or stream median,linguistic
+4,next greater or next smaller element,linguistic
+5,number of ways or minimum cost or optimal substructure,linguistic
+6,all combinations or permutations or subsets,linguistic
+7,detect cycle or find middle in linked list no extra space,linguistic
+8,shortest path in unweighted grid or graph,structural
+9,islands or connected components or flood fill,structural
+10,search in sorted array or minimize the maximum,structural
+11,prefix sum or range sum query,linguistic
+12,intervals overlapping or merge intervals,linguistic
+13,find duplicate in array with O(1) space,constraint
+14,frequency count or complement lookup in map,structural
+15,balance matching parentheses or brackets,linguistic
+16,level by level or minimum hops traversal,structural
+17,sort then sweep or greedy by endpoint,structural
+18,n at most 20 exponential search feasible,constraint
+19,n up to 100000 requires O(n log n) or better,constraint
+20,moving window of fixed or variable size,structural

@@ -1,0 +1,61 @@
+id,leetcode_id,url,difficulty,disguise_level,decomposition
+1,121,https://leetcode.com/problems/best-time-to-buy-and-sell-stock/,Easy,1,track min price so far -> max profit -> Arrays_Strings
+2,217,https://leetcode.com/problems/contains-duplicate/,Easy,1,scan array check for repeat -> Arrays_Strings
+3,238,https://leetcode.com/problems/product-of-array-except-self/,Medium,2,prefix product then suffix product -> Arrays_Strings
+4,125,https://leetcode.com/problems/valid-palindrome/,Easy,1,two pointers converge check chars -> Two_Pointers
+5,167,https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/,Medium,2,sorted + two pointers sum compare to target -> Two_Pointers
+6,15,https://leetcode.com/problems/3sum/,Medium,3,sort + fix one + two pointers on rest -> Two_Pointers
+7,11,https://leetcode.com/problems/container-with-most-water/,Medium,3,two pointers converge area shrinks by moving shorter side -> Two_Pointers
+8,3,https://leetcode.com/problems/longest-substring-without-repeating-characters/,Medium,2,expand window shrink on duplicate char -> Sliding_Window
+9,424,https://leetcode.com/problems/longest-repeating-character-replacement/,Medium,3,window length minus max freq <= k -> Sliding_Window
+10,1004,https://leetcode.com/problems/max-consecutive-ones-iii/,Medium,2,window of ones allow k zeros -> Sliding_Window
+11,76,https://leetcode.com/problems/minimum-window-substring/,Hard,4,expand until all chars covered then shrink -> Sliding_Window
+12,303,https://leetcode.com/problems/range-sum-query-immutable/,Easy,1,build prefix sum array query in O(1) -> Prefix_Sum
+13,560,https://leetcode.com/problems/subarray-sum-equals-k/,Medium,3,prefix sum + hash map of seen sums -> Prefix_Sum then Hashing
+14,1248,https://leetcode.com/problems/count-number-of-nice-subarrays/,Medium,4,parity prefix sum count subarrays with k odds -> Prefix_Sum
+15,704,https://leetcode.com/problems/binary-search/,Easy,1,classic lo/hi halving -> Binary_Search
+16,33,https://leetcode.com/problems/search-in-rotated-sorted-array/,Medium,3,identify sorted half then binary search -> Binary_Search
+17,153,https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/,Medium,2,compare mid to right to find pivot -> Binary_Search
+18,875,https://leetcode.com/problems/koko-eating-bananas/,Medium,4,binary search on answer space for eating rate -> Binary_Search
+19,1,https://leetcode.com/problems/two-sum/,Easy,1,store complement in hash map -> Hashing
+20,49,https://leetcode.com/problems/group-anagrams/,Medium,2,sorted string as key group into hash map -> Hashing
+21,128,https://leetcode.com/problems/longest-consecutive-sequence/,Medium,3,hash set then expand from sequence start -> Hashing
+22,20,https://leetcode.com/problems/valid-parentheses/,Easy,1,push open brackets pop on close check match -> Stacks_Queues
+23,155,https://leetcode.com/problems/min-stack/,Medium,2,maintain auxiliary min stack in sync -> Stacks_Queues
+24,232,https://leetcode.com/problems/implement-queue-using-stacks/,Easy,2,two stacks simulate enqueue/dequeue -> Stacks_Queues
+25,739,https://leetcode.com/problems/daily-temperatures/,Medium,2,pop when warmer day found store index -> Monotonic_Stack
+26,496,https://leetcode.com/problems/next-greater-element-i/,Easy,1,monotonic stack builds next-greater map -> Monotonic_Stack
+27,84,https://leetcode.com/problems/largest-rectangle-in-histogram/,Hard,4,pop when shorter bar appears accumulate area -> Monotonic_Stack
+28,206,https://leetcode.com/problems/reverse-linked-list/,Easy,1,three pointers rewire next pointers -> Linked_Lists
+29,21,https://leetcode.com/problems/merge-two-sorted-lists/,Easy,1,dummy head merge two sorted chains -> Linked_Lists
+30,19,https://leetcode.com/problems/remove-nth-node-from-end-of-list/,Medium,2,two pointers n apart then remove trailing -> Linked_Lists
+31,141,https://leetcode.com/problems/linked-list-cycle/,Easy,1,fast/slow meet inside cycle -> Fast_Slow_Pointers
+32,876,https://leetcode.com/problems/middle-of-the-linked-list/,Easy,1,fast moves 2x slow at middle when fast done -> Fast_Slow_Pointers
+33,287,https://leetcode.com/problems/find-the-duplicate-number/,Medium,4,treat array as linked list find cycle entry -> Fast_Slow_Pointers
+34,104,https://leetcode.com/problems/maximum-depth-of-binary-tree/,Easy,1,max of left/right depth + 1 -> Trees_DFS
+35,226,https://leetcode.com/problems/invert-binary-tree/,Easy,1,swap children recurse -> Trees_DFS
+36,543,https://leetcode.com/problems/diameter-of-binary-tree/,Easy,2,max path through node is left height + right height -> Trees_DFS
+37,124,https://leetcode.com/problems/binary-tree-maximum-path-sum/,Hard,4,postorder max gain left/right update global max -> Trees_DFS
+38,102,https://leetcode.com/problems/binary-tree-level-order-traversal/,Medium,1,bfs collect nodes per level via queue size snapshot -> Trees_BFS
+39,199,https://leetcode.com/problems/binary-tree-right-side-view/,Medium,2,bfs last node in each level -> Trees_BFS
+40,994,https://leetcode.com/problems/rotting-oranges/,Medium,3,multi-source bfs from all rotten oranges -> Trees_BFS
+41,215,https://leetcode.com/problems/kth-largest-element-in-an-array/,Medium,2,min-heap of size k -> Heaps
+42,347,https://leetcode.com/problems/top-k-frequent-elements/,Medium,2,frequency map then min-heap top k -> Heaps
+43,295,https://leetcode.com/problems/find-median-from-data-stream/,Hard,3,two heaps max-heap lower half min-heap upper half -> Heaps
+44,78,https://leetcode.com/problems/subsets/,Medium,1,include or exclude each element backtrack -> Backtracking
+45,46,https://leetcode.com/problems/permutations/,Medium,1,swap element into position recurse -> Backtracking
+46,39,https://leetcode.com/problems/combination-sum/,Medium,2,pick element allow repeat prune when over target -> Backtracking
+47,51,https://leetcode.com/problems/n-queens/,Hard,3,place queen per row check col and diagonals -> Backtracking
+48,200,https://leetcode.com/problems/number-of-islands/,Medium,2,dfs/bfs flood fill marking visited -> Graphs
+49,133,https://leetcode.com/problems/clone-graph/,Medium,2,bfs with hash map original to clone -> Graphs
+50,207,https://leetcode.com/problems/course-schedule/,Medium,3,topological sort detect cycle in directed graph -> Graphs
+51,417,https://leetcode.com/problems/pacific-atlantic-water-flow/,Medium,4,reverse bfs from both coasts mark reachable -> Graphs
+52,547,https://leetcode.com/problems/number-of-provinces/,Medium,2,union-find or dfs count components -> Union_Find
+53,684,https://leetcode.com/problems/redundant-connection/,Medium,3,union-find edge creates cycle when already connected -> Union_Find
+54,721,https://leetcode.com/problems/accounts-merge/,Medium,4,union emails by account then group by root -> Union_Find
+55,70,https://leetcode.com/problems/climbing-stairs/,Easy,1,dp[i]=dp[i-1]+dp[i-2] Fibonacci recurrence -> Dynamic_Programming
+56,198,https://leetcode.com/problems/house-robber/,Medium,2,dp[i]=max(dp[i-1] dp[i-2]+val) skip or take -> Dynamic_Programming
+57,322,https://leetcode.com/problems/coin-change/,Medium,2,dp[i]=min coins to make amount i -> Dynamic_Programming
+58,300,https://leetcode.com/problems/longest-increasing-subsequence/,Medium,3,dp[i]=longest ending at i or binary search patience sort -> Dynamic_Programming
+59,55,https://leetcode.com/problems/jump-game/,Medium,2,greedily track furthest reachable index -> Greedy
+60,56,https://leetcode.com/problems/merge-intervals/,Medium,2,sort by start merge overlapping greedily -> Greedy
