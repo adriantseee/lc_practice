@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.db
+atlas.db
+__pycache__/
+.venv/
+dist/
