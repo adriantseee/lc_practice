@@ -1,3 +1,4 @@
+"""HTTP API server for Pattern Atlas: exposes patterns, prerequisite graph, next-pattern picks, clue recognition, and progress updates to the web UI."""
 import http.server
 import json
 import pathlib
